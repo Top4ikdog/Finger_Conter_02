@@ -39,6 +39,9 @@ while cap.isOpened():  # пока камера "работает"
             for coordinate in finger_Coord:
                 if handList[coordinate[0]][1] < handList[coordinate[1]][1]:
                     upCount += 1
+            
+            if handList[coordinate[0]][1] < handList[coordinate[1]][1]:
+                upCount += 1
            
 
         print(upCount)
