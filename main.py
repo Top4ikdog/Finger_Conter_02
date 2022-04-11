@@ -42,7 +42,6 @@ while cap.isOpened():  # пока камера "работает"
             if handList[coordinate[0]][1] < handList[coordinate[1]][1]:
                 upCount += 1
            
-
         print(upCount)
         cv2.putText(image, str(upCount), (50, 100), cv2.FONT_HERSHEY_PLAIN, 8, (255, 225, 255), 8)
 
