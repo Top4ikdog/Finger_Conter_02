@@ -8,7 +8,7 @@ hands = mp_Hands.Hands(
     model_complexity=1,
     min_detection_confidence=0.75,
     min_tracking_confidence=0.75,
-    max_num_hands=2)
+    max_num_hands=4)
 mpDraw = mp.solutions.drawing_utils  # утилита для рисования
 finger_Coord = [(8, 6), (12, 10), (16, 14), (20, 18)]  # координаты интересующих точек у пальцев (кроме большого)
 thumb_Coord = (4, 3)  # координаты интересующих точек большого пальца
@@ -39,13 +39,12 @@ while cap.isOpened():  # пока камера "работает"
             for coordinate in finger_Coord:
                 if handList[coordinate[0]][1] < handList[coordinate[1]][1]:
                     upCount += 1
-            
             if handList[coordinate[0]][1] < handList[coordinate[1]][1]:
                 upCount += 1
            
 
         print(upCount)
-        cv2.putText(image, str(upCount), (50, 100), cv2.FONT_HERSHEY_PLAIN, 8, (0, 220, 100), 8)
+        cv2.putText(image, str(upCount), (50, 100), cv2.FONT_HERSHEY_PLAIN, 8, (255, 225, 255), 8)
 
 
 
