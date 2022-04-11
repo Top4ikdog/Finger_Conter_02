@@ -63,6 +63,8 @@ while cap.isOpened():  # пока камера "работает"
 
 
     currentTime = time.time()
+    fps = 1 / (currentTime - prevTime)
+    cv2.putText(image, f'FPS: {fps}', (350, 475), cv2.FONT_HERSHEY_PLAIN, 3, (255,255,255), 4)
     cv2.imshow('image', image)
     if cv2.waitKey(1) &  0xFF == 27:  # esc
         break
