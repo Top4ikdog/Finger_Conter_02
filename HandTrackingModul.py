@@ -12,7 +12,7 @@ class HandDetector():
 
     def FindHands(self, img):
         RGB_image = cv2.cvtColor(img ,cv2.COLOR_BGR2RGB)
-        self.result = self.hands.process(
+        self.result = self.hands.process(RGB_image)
 
     def FindPosition(self):
         pass
