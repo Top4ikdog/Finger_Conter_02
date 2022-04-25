@@ -13,4 +13,6 @@ class fingerDetector():
         self.result = self.hands.process(RGB_image)
         if draw:
             for handLms in self.result.multi_hand_landmarks:
-                self.mpDraw.draw_landmarks(img, handLms, self.mpDraw.HAND)
+                self.mpDraw.draw_landmarks(img, handLms, self.mpDraw.HAND_CONNECTIONS)
+
+        return img
