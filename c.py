@@ -1,31 +1,15 @@
-class Transport:
-    ClassName = "Транспорт"
-    objCount = 0
-    def __init__(self, color, year, type):
+class Vehicle:
+    def __init__(self, color, price, type):
         self.color = color
-        self.year = year
+        self.price = price
         self.type = type
-        self.age = self.count_age()
-        Transport.objCount += 1
-    def stop(self):
-        print("Нажата педаль тормоза!")
-        
     def drive(self):
-        print("Нажата педаль газа!")
-    
-    def count_age(self):
-        return 2022 - self.year
+        print(self.type, self.color, "поехал")
+    def stop(self):
+        print(self.type, self.color, "остановился")
 
-    def info(self):
-        print(self.age,self.year,self.color,self.type)
 
-auto1 = 0
-print(id(auto1))
-auto1 = Transport('red', 2009, 'light')
-auto2 = Transport('green', 1991, 'truck')
-auto1.drive()
-auto1.stop()
-auto2.info()
-print(auto1.ClassName,auto2.ClassName)
-print(Transport.objCount)
-pass
+car1 = Vehicle("Красный", 50000, "Легковой")
+print(car1.color,car1.price,car1.type)
+car1.drive()
+car1.stop()
