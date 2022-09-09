@@ -54,7 +54,7 @@ while cap.isOpened():  # пока камера "работает"
                 if handList[coordinate[0]][1] < handList[coordinate[1]][1]:
                     upCount += 1
             else:
-                if handList[thumb_Coord[0]][0]< handList[thumb_Coord[1][0]]:
+                if handList[thumb_Coord[0]][0]< handList[thumb_Coord[1]][0]:
                     upCount += 1
 
         print(upCount)
